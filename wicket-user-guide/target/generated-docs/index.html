@@ -784,18 +784,22 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="paragraph">
 <p>Wicket core developers have done a wonderful job with this framework and they continue to improve it release after release.
-However Wicket never provided a freely available documentation and even if you can find on Internet many live examples and many technical articles on it (most of them at  <a href="http://www.wicket-library.com/">Wicket Library</a> and at  <a href="http://wicketinaction.com">Wicket in Action</a> ), the lack of an organized and freely available documentation has always been a sore point for this framework.</p>
+However Wicket never provided a freely available documentation and even if you can find on Internet many live examples and many technical articles on it (most of them at
+<a href="http://www.wicket-library.com/">Wicket Library</a> and at
+<a href="http://wicketinaction.com">Wicket in Action</a> ), the lack of an organized and freely available documentation has always been a sore point for this framework.</p>
 </div>
 <div class="paragraph">
 <p>That&#8217;s quite an issue because many other popular frameworks (like Spring, Hibernate or Struts) offer a vast and very good documentation which substantially contributed to their success.</p>
 </div>
 <div class="paragraph">
 <p>This document is not intended to be a complete reference for Wicket but it simply aims to be a straightforward introduction to the framework that should significantly reduce its learning curve. What you will find here reflects my experience with Wicket and it&#8217;s strictly focused on the framework.
-The various Wicket-related topics are gradually introduced using pragmatic examples of code that you can find in  <a href="https://github.com/bitstorm/Wicket-tutorial-examples">the according repository on Github.</a>
+The various Wicket-related topics are gradually introduced using pragmatic examples of code that you can find in
+<a href="https://github.com/bitstorm/Wicket-tutorial-examples">the according repository on Github.</a>
 However remember that Wicket is a vast and powerful tool, so you should feel confident with the topics exposed in this document before starting to code your real applications!</p>
 </div>
 <div class="paragraph">
-<p>For those who need further documentation on Wicket, there are  <a href="http://wicket.apache.org/learn/books/">many good books</a> available for this framework.</p>
+<p>For those who need further documentation on Wicket, there are
+<a href="http://wicket.apache.org/learn/books/">many good books</a> available for this framework.</p>
 </div>
 <div class="paragraph">
 <p>Hope you&#8217;ll find this guide helpful. Have fun with Wicket!</p>
@@ -823,7 +827,8 @@ However remember that Wicket is a vast and powerful tool, so you should feel con
 <h2 id="how-to-use-the-example-code"><a class="anchor" href="#how-to-use-the-example-code"></a>2. How to use the example code</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Most of the code you will find in this document is available as a  <a href="https://github.com/bitstorm/Wicket-tutorial-examples">Git repository</a> and is licensed under the ASF 2.0. To get a local copy of the repository you can run the clone command from shell:</p>
+<p>Most of the code you will find in this document is available as a
+<a href="https://github.com/bitstorm/Wicket-tutorial-examples">Git repository</a> and is licensed under the ASF 2.0. To get a local copy of the repository you can run the clone command from shell:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -958,13 +963,16 @@ Let&#8217;s quickly review the main advantages that this paradigm can offer us:<
 <p><strong>Wicket is 100% open source</strong>: Wicket is a top Apache project and it doesn&#8217;t depend on any private company. You don&#8217;t have to worry about future licensing changes, Wicket will always be released under Apache license 2.0 and freely available.</p>
 </li>
 <li>
-<p><strong>Wicket is a community driven project</strong>: The Wicket team supports and promotes the dialogue with the framework&#8217;s users through two mailing lists  <a href="http://wicket.apache.org/help/email.html">(one for users and another one for framework developers)</a> and an  <a href="https://issues.apache.org/jira/browse/WICKET">Apache JIRA</a> (the issue tracking system). Moreover, as any other Apache project, Wicket is developed paying great attention to user feedbacks and to suggested features.</p>
+<p><strong>Wicket is a community driven project</strong>: The Wicket team supports and promotes the dialogue with the framework&#8217;s users through two mailing lists
+<a href="http://wicket.apache.org/help/email.html">(one for users and another one for framework developers)</a> and an
+<a href="https://issues.apache.org/jira/browse/WICKET">Apache JIRA</a> (the issue tracking system). Moreover, as any other Apache project, Wicket is developed paying great attention to user feedbacks and to suggested features.</p>
 </li>
 <li>
 <p><strong>Wicket is just about Java and good old HTML</strong>: almost all web frameworks force users to adopt special tags or to use server side code inside HTML markup. This is clearly in contrast with the concept of separation between presentation and business logic and it leads to a more confusing code in our pages. In Wicket we don&#8217;t have to take care of generating HTML inside the page itself, and we won&#8217;t need to use any tag other than standard HTML tags. All we have to do is to attach our components (Java instances) to the HTML tags using a simple tag attribute called <em>wicket:id</em> (we will shortly see how to use it).</p>
 </li>
 <li>
-<p><strong>With Wicket we can easily use JavaBeans and  <a href="http://en.wikipedia.org/wiki/Plain_Old_Java_Object">POJO</a> in our web tier</strong>: one of the most annoying and error-prone task in web development is collecting user input through a form and keeping form fields updated with previously inserted values. This usually requires a huge amount of code to extract input from request parameters (which are strings), parse them to Java types and store them into some kind of variable. And this is just half of the work we have to do as we must implement the inverse path (load data from Java to the web form).Moreover, most of the times our forms will use a JavaBean or a POJO as backing object, meaning that we must manually map form fields with the corresponding object fields and vice versa. Wicket comes with an intuitive and flexible mechanism that does this mapping for us without any configuration overhead (using a convention over configuration approach) and in a transparent way.
+<p><strong>With Wicket we can easily use JavaBeans and
+<a href="http://en.wikipedia.org/wiki/Plain_Old_Java_Object">POJO</a> in our web tier</strong>: one of the most annoying and error-prone task in web development is collecting user input through a form and keeping form fields updated with previously inserted values. This usually requires a huge amount of code to extract input from request parameters (which are strings), parse them to Java types and store them into some kind of variable. And this is just half of the work we have to do as we must implement the inverse path (load data from Java to the web form).Moreover, most of the times our forms will use a JavaBean or a POJO as backing object, meaning that we must manually map form fields with the corresponding object fields and vice versa. Wicket comes with an intuitive and flexible mechanism that does this mapping for us without any configuration overhead (using a convention over configuration approach) and in a transparent way.
 <a href="#wicket-models-and-forms">Chapter 10</a> will introduce the concept of Wicket model and we will learn how to harness this entity with forms.</p>
 </li>
 <li>
@@ -993,7 +1001,8 @@ Both frameworks share the same component-based architecture: in AWT we have a <e
 <div class="sect2">
 <h3 id="wicket-distribution-and-modules"><a class="anchor" href="#wicket-distribution-and-modules"></a>4.1. Wicket distribution and modules</h3>
 <div class="paragraph">
-<p>Wicket is available as a binary package on the main site  <a href="http://wicket.apache.org">http://wicket.apache.org</a> . Inside this archive we can find the distribution jars of the framework. Each jar corresponds to a sub-module of the framework. The following table reports these modules along with a short description of their purpose and with the related dependencies:</p>
+<p>Wicket is available as a binary package on the main site
+<a href="http://wicket.apache.org">http://wicket.apache.org</a> . Inside this archive we can find the distribution jars of the framework. Each jar corresponds to a sub-module of the framework. The following table reports these modules along with a short description of their purpose and with the related dependencies:</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -1095,7 +1104,8 @@ Both frameworks share the same component-based architecture: in AWT we have a <e
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-All the example projects presented in this document have been generated using Maven and the utility page at  <a href="http://wicket.apache.org/start/quickstart.html">http://wicket.apache.org/start/quickstart.html</a> . <strong>Appendix A</strong> contains the instructions needed to use these projects and build a quickstart application using Apache Maven. All the artifacts used in the next example (files web.xml, HomePage.class and HomePage.html) are automatically generated by Maven.
+All the example projects presented in this document have been generated using Maven and the utility page at
+<a href="http://wicket.apache.org/start/quickstart.html">http://wicket.apache.org/start/quickstart.html</a> . <strong>Appendix A</strong> contains the instructions needed to use these projects and build a quickstart application using Apache Maven. All the artifacts used in the next example (files web.xml, HomePage.class and HomePage.html) are automatically generated by Maven.
 </td>
 </tr>
 </table>
@@ -1549,7 +1559,8 @@ add(myPanel);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Component <em>MyPanel</em> is a custom panel containing only a label having _ [name] as id. Under those conditions we could retrieve this label from the container page using the following path expression:</p>
+<p>Component <em>MyPanel</em> is a custom panel containing only a label having _
+[name] as id. Under those conditions we could retrieve this label from the container page using the following path expression:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1952,7 +1963,8 @@ An example of a parent page using the tag <em>&lt;wicket:child&gt;</em> is the f
 </div>
 </div>
 <div class="paragraph">
-<p>Suppose we want to add some style to label content making it red and bolded. We can add to the label an <em>AttributeModifier</em> which creates the tag attribute <em>style</em> with value _ :[color:red;font-weight:bold]</p>
+<p>Suppose we want to add some style to label content making it red and bolded. We can add to the label an <em>AttributeModifier</em> which creates the tag attribute <em>style</em> with value _
+:[color:red;font-weight:bold]</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2785,7 +2797,9 @@ Stateless pages are never versioned and that&#8217;s why they don&#8217;t requir
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-For more details about page storing you can take a look at paragraph  [Page storing] from chapter  [Wicket Internals] The content of this paragraph is from wiki page <a href="https://cwiki.apache.org/confluence/display/WICKET/Page+Storage" class="bare">https://cwiki.apache.org/confluence/display/WICKET/Page+Storage</a>.
+For more details about page storing you can take a look at paragraph
+[Page storing] from chapter
+[Wicket Internals] The content of this paragraph is from wiki page <a href="https://cwiki.apache.org/confluence/display/WICKET/Page+Storage" class="bare">https://cwiki.apache.org/confluence/display/WICKET/Page+Storage</a>.
 </td>
 </tr>
 </table>
@@ -2819,7 +2833,8 @@ Page page = pageReference.getPage();</code></pre>
 <div class="sect3">
 <h4 id="pluggable-serialization"><a class="anchor" href="#pluggable-serialization"></a>8.2.3. Pluggable serialization</h4>
 <div class="paragraph">
-<p>Starting from version 1.5 it is possible to choose which implementation of Java serialization will be used by Wicket to store page versions. Wicket serializes pages using an implementation of interface <em>org.apache.wicket.serialize.ISerializer</em>. The default implementation is <em>org.apache.wicket.serialize.java.JavaSerializer</em> and it uses the standard Java serialization mechanism based on classes ObjectOutputStream and ObjectInputStream. However on Internet we can find other interesting serialization libraries like <a href="https://github.com/EsotericSoftware/kryo">Kryo</a></p>
+<p>Starting from version 1.5 it is possible to choose which implementation of Java serialization will be used by Wicket to store page versions. Wicket serializes pages using an implementation of interface <em>org.apache.wicket.serialize.ISerializer</em>. The default implementation is <em>org.apache.wicket.serialize.java.JavaSerializer</em> and it uses the standard Java serialization mechanism based on classes ObjectOutputStream and ObjectInputStream. However on Internet we can find other interesting serialization libraries like
+<a href="https://github.com/EsotericSoftware/kryo">Kryo</a></p>
 </div>
 <div class="paragraph">
 <p>We can access this interface inside the method init of the class Application using the getFrameworkSettings() method :</p>
@@ -3173,7 +3188,8 @@ This paragraph will provide just the basic informations about what happens behin
 </div>
 </div>
 <div class="paragraph">
-<p>The <em>getRequestCycleListeners</em> method returns an instance of class <em>org.apache.wicket.request.cycle.RequestCycleListenerCollection</em>. This class is a sort of typed collection for <em>IRequestCycleListener</em> and it also implements the  <a href="http://en.wikipedia.org/wiki/Composite_pattern">Composite pattern</a> .</p>
+<p>The <em>getRequestCycleListeners</em> method returns an instance of class <em>org.apache.wicket.request.cycle.RequestCycleListenerCollection</em>. This class is a sort of typed collection for <em>IRequestCycleListener</em> and it also implements the
+<a href="http://en.wikipedia.org/wiki/Composite_pattern">Composite pattern</a> .</p>
 </div>
 </div>
 </div>
@@ -3817,7 +3833,8 @@ add(<span class="keyword">new</span> ExternalLink(<span class="string"><span cla
 <div class="sect3">
 <h4 id="mounting-a-single-page"><a class="anchor" href="#mounting-a-single-page"></a>10.6.1. Mounting a single page</h4>
 <div class="paragraph">
-<p>With Wicket we can mount a page to a given path in much the same way as we map a servlet filter to a desired path inside file web.xml (see <a href="#configuration-of-wicket-applications">paragraph 4.2</a>). Using mountPage(String path, Class &lt;T&gt; pageClass) method of the WepApplication class we tell Wicket to respond with a new instance of pageClass whenever a user navigates to the given path. In the application class of the project MountedPagesExample we mount MountedPage to the  [/pageMount] path:</p>
+<p>With Wicket we can mount a page to a given path in much the same way as we map a servlet filter to a desired path inside file web.xml (see <a href="#configuration-of-wicket-applications">paragraph 4.2</a>). Using mountPage(String path, Class &lt;T&gt; pageClass) method of the WepApplication class we tell Wicket to respond with a new instance of pageClass whenever a user navigates to the given path. In the application class of the project MountedPagesExample we mount MountedPage to the
+[/pageMount] path:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4120,7 +4137,8 @@ By default <em>CryptoMapper</em> encrypts page URLs with a cipher that might not
 <div class="sect2">
 <h3 id="what-is-a-model"><a class="anchor" href="#what-is-a-model"></a>11.1. What is a model?</h3>
 <div class="paragraph">
-<p>Model is essentially a  <a href="http://en.wikipedia.org/wiki/Facade_pattern">facade</a> interface which allows components to access and modify their data without knowing any detail about how they are managed or persisted. Every component has at most one related model, while a model can be shared among different components. In Wicket a model is any implementation of the interface <em>org.apache.wicket.model.IModel</em>:</p>
+<p>Model is essentially a
+<a href="http://en.wikipedia.org/wiki/Facade_pattern">facade</a> interface which allows components to access and modify their data without knowing any detail about how they are managed or persisted. Every component has at most one related model, while a model can be shared among different components. In Wicket a model is any implementation of the interface <em>org.apache.wicket.model.IModel</em>:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -4185,16 +4203,20 @@ The Model class comes with a bunch of factory methods that makes it easier to bu
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>	new Model&lt;String&gt;( [Hello WicketWorld!]
-we can write</pre>
+<pre>new Model&lt;String&gt;(</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>we can write</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>	Model.of( [Hello WicketWorld!]
-If the data object is a List, a Map or a Set we can use similar methods called ofList, ofMap and ofSet.
-From now on we will use these factory methods in our examples.</pre>
+<pre>Model.of(</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>If the data object is a List, a Map or a Set we can use similar methods called ofList, ofMap and ofSet.
+From now on we will use these factory methods in our examples.</p>
 </div>
 <div class="paragraph">
 <p>It&#8217;s quite clear that if our Label must display a static text it doesn&#8217;t make much sense to build a model by hand like we did in the last code example.
@@ -4225,7 +4247,8 @@ add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-By default the class Component escapes HTML sensitive characters (like '&lt;', '&gt;' or '&amp;') from the textual representation of its model object. The term 'escape' means that these characters will be replaced with their corresponding HTML  <a href="http://en.wikipedia.org/wiki/Character_entity_reference">entity</a> (for example '&lt;' becomes '&lt; '). This is done for security reasons as a malicious user could attempt to inject markup or JavaScript into our pages. If we want to display the raw content stored inside a model, we can tell the Component class not to escape characters by calling the setEscapeModelStrings(false) method.
+By default the class Component escapes HTML sensitive characters (like '&lt;', '&gt;' or '&amp;') from the textual representation of its model object. The term 'escape' means that these characters will be replaced with their corresponding HTML
+<a href="http://en.wikipedia.org/wiki/Character_entity_reference">entity</a> (for example '&lt;' becomes '&lt; '). This is done for security reasons as a malicious user could attempt to inject markup or JavaScript into our pages. If we want to display the raw content stored inside a model, we can tell the Component class not to escape characters by calling the setEscapeModelStrings(false) method.
 </td>
 </tr>
 </table>
@@ -4289,7 +4312,8 @@ By default the class Component escapes HTML sensitive characters (like '&lt;', '
 </div>
 </div>
 <div class="paragraph">
-<p>PropertyModel has just one constructor with two parameters: the model object (person in our example) and the name of the property we want to read/write ( [name] in our example). This last parameter is called property expression. Internally, methods getObject/setObject use property expression to get/set property&#8217;s value. To resolve class properties PropertyModel uses class <em>org.apache.wicket.util.lang.Property</em> Resolver which can access any kind of property, private fields included.</p>
+<p>PropertyModel has just one constructor with two parameters: the model object (person in our example) and the name of the property we want to read/write (
+[name] in our example). This last parameter is called property expression. Internally, methods getObject/setObject use property expression to get/set property&#8217;s value. To resolve class properties PropertyModel uses class <em>org.apache.wicket.util.lang.Property</em> Resolver which can access any kind of property, private fields included.</p>
 </div>
 <div class="paragraph">
 <p>Just like the Java language, property expressions support dotted notation to select sub properties. So if we want to display the name of the Person&#8217;s spouse we can write:</p>
@@ -4364,7 +4388,8 @@ add(<span class="keyword">new</span> <span class="predefined-type">Label</span>(
 </div>
 </div>
 <div class="paragraph">
-<p>CompoundPropertyModel can save us a lot of boring coding if we choose the id of components according to properties name. However it&#8217;s also possible to use this type of model even if the id of a component does not correspond to a valid property expression. The method bind(String property) allows to create a property model from a given CompoundPropertyModel using the provided parameter as property expression. For example if we want to display the spouse&#8217;s name in a label having  [xyz] as id, we can write the following code:</p>
+<p>CompoundPropertyModel can save us a lot of boring coding if we choose the id of components according to properties name. However it&#8217;s also possible to use this type of model even if the id of a component does not correspond to a valid property expression. The method bind(String property) allows to create a property model from a given CompoundPropertyModel using the provided parameter as property expression. For example if we want to display the spouse&#8217;s name in a label having
+[xyz] as id, we can write the following code:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4515,7 +4540,9 @@ loginStatus = <span class="keyword">new</span> <span class="predefined-type">Lab
 </div>
 </div>
 <div class="paragraph">
-<p>Component TextField corresponds to the standard text field, without any particular behavior or restriction on the allowed values. We must bind this component to the &lt;input&gt; tag with the attribute type set to  [text] PasswordTextField is a subtype of TextFiled and it must be used with an &lt;input&gt; tag with the attribute type set to [password] For security reasons component PasswordTextField cleans its value at each request, so it wil be always empty after the form has been rendered. By default PasswordTextField fields are required, meaning that if we left them empty, the form won&#8217;t be submitted (i.e. onSubmit won&#8217;t be called). Class FormComponent provides method setRequired(boolean required) to change this behavior. Inside onSubmit, to get/set model objects we have used shortcut methods setDefaultModelObject and getDefaultModelObject. Both methods are defined in class Component (see class diagram from Illustration 9.1).</p>
+<p>Component TextField corresponds to the standard text field, without any particular behavior or restriction on the allowed values. We must bind this component to the &lt;input&gt; tag with the attribute type set to
+[text] PasswordTextField is a subtype of TextFiled and it must be used with an &lt;input&gt; tag with the attribute type set to
+[password] For security reasons component PasswordTextField cleans its value at each request, so it wil be always empty after the form has been rendered. By default PasswordTextField fields are required, meaning that if we left them empty, the form won&#8217;t be submitted (i.e. onSubmit won&#8217;t be called). Class FormComponent provides method setRequired(boolean required) to change this behavior. Inside onSubmit, to get/set model objects we have used shortcut methods setDefaultModelObject and getDefaultModelObject. Both methods are defined in class Component (see class diagram from Illustration 9.1).</p>
 </div>
 <div class="paragraph">
 <p>The following are the possible markup and code for the login page:</p>
@@ -4623,7 +4650,10 @@ add(spouse);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The value displayed by label  [name] will be  [John] and not the spouse&#8217;s name   [Jill] as you may expect. In this example the label doesn&#8217;t own a model, so it must search up its container hierarchy for an inheritable model. However, its container (WebMarkup Container with id 'spouse') doesn&#8217;t own a model, hence the request for a model is forwarded to the parent container, which in this case is the page. In the end the label inherits CompoundPropertyModel from page but only its own id is used for the property expression. The containers in between are never taken into account for the final property expression.</p>
+<p>The value displayed by label
+[name] will be
+[John] and not the spouse&#8217;s name
+[Jill] as you may expect. In this example the label doesn&#8217;t own a model, so it must search up its container hierarchy for an inheritable model. However, its container (WebMarkup Container with id 'spouse') doesn&#8217;t own a model, hence the request for a model is forwarded to the parent container, which in this case is the page. In the end the label inherits CompoundPropertyModel from page but only its own id is used for the property expression. The containers in between are never taken into account for the final property expression.</p>
 </div>
 </div>
 </div>
@@ -4710,7 +4740,8 @@ form.add(<span class="keyword">new</span> DropDownChoice&lt;<span class="predefi
 <div class="sect2">
 <h3 id="model-chaining"><a class="anchor" href="#model-chaining"></a>11.5. Model chaining</h3>
 <div class="paragraph">
-<p>Models that implement the interface <em>org.apache.wicket.model.IChainingModel</em> can be used to build a chain of models. These kinds of models are able to recognize whether their model object is itself an implementation of IModel and if so, they will call getObject on the wrapped model and the returned value will be the actual model object. In this way we can combine the action of an arbitrary number of models, making exactly a chain of models. Chaining models allows to combine different data persistence strategies, similarly to what we do with chains of  <a href="http://java.sun.com/developer/technicalArticles/Streams/ProgIOStreams">I/O streams.</a> To see model chaining in action we will build a page that implements the List/Detail View pattern, where we have a drop-down list of Person objects and a form to display and edit the data of the current selected Person.</p>
+<p>Models that implement the interface <em>org.apache.wicket.model.IChainingModel</em> can be used to build a chain of models. These kinds of models are able to recognize whether their model object is itself an implementation of IModel and if so, they will call getObject on the wrapped model and the returned value will be the actual model object. In this way we can combine the action of an arbitrary number of models, making exactly a chain of models. Chaining models allows to combine different data persistence strategies, similarly to what we do with chains of
+<a href="http://java.sun.com/developer/technicalArticles/Streams/ProgIOStreams">I/O streams.</a> To see model chaining in action we will build a page that implements the List/Detail View pattern, where we have a drop-down list of Person objects and a form to display and edit the data of the current selected Person.</p>
 </div>
 <div class="paragraph">
 <p>The example page will look like this:</p>
@@ -4836,7 +4867,8 @@ For model objects this could be a serious issue for (at least) two main reasons:
 <p>The model object could be a very large instance, hence serialization would become very expensive in terms of time and memory.</p>
 </li>
 <li>
-<p>We simply may not be able to use a serializable object as model object. In paragraphs 1.4 and 9.2 we stated that Wicket allows us to use a POJO as backing object, but  <a href="http://en.wikipedia.org/wiki/Plain_Old_Java_Object#Definition">POJOs</a> are ordinary objects with no prespecified interface, annotation or superclass, hence they are not required to implement the standard Serializable interface.</p>
+<p>We simply may not be able to use a serializable object as model object. In paragraphs 1.4 and 9.2 we stated that Wicket allows us to use a POJO as backing object, but
+<a href="http://en.wikipedia.org/wiki/Plain_Old_Java_Object#Definition">POJOs</a> are ordinary objects with no prespecified interface, annotation or superclass, hence they are not required to implement the standard Serializable interface.</p>
 </li>
 </ol>
 </div>
@@ -4867,7 +4899,8 @@ Usually detaching operations are strictly dependent on the persistence technolog
 <p>onDetach and onAttach can be overridden in order to obtain further control over the detaching procedure.</p>
 </div>
 <div class="paragraph">
-<p>Now as example of a possible use of LoadableDetachableModel, we will build a model designed to work with entities managed via  <a href="http://en.wikipedia.org/wiki/Java_Persistence_API">JPA.</a> To understand the following code a basic knowledge of JPA is required even if we won&#8217;t go into the detail of this standard.</p>
+<p>Now as example of a possible use of LoadableDetachableModel, we will build a model designed to work with entities managed via
+<a href="http://en.wikipedia.org/wiki/Java_Persistence_API">JPA.</a> To understand the following code a basic knowledge of JPA is required even if we won&#8217;t go into the detail of this standard.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -5076,7 +5109,8 @@ Please note that the model of form components is updated only if no validation e
 <p>A validator is an implementation of the <em>org.apache.wicket.validation.IValidator</em> interface and the <em>FormComponent</em> has a version of method add which takes as input a reference of this interface.</p>
 </div>
 <div class="paragraph">
-<p>For example if we want to use a text field to insert an email address, we could use the built-in validator  EmailAddressValidator to ensure that the inserted input will respect the email format  <a href="http://en.wikipedia.org/wiki/Email_address">local-part@domain</a> :</p>
+<p>For example if we want to use a text field to insert an email address, we could use the built-in validator  EmailAddressValidator to ensure that the inserted input will respect the email format
+<a href="http://en.wikipedia.org/wiki/Email_address">local-part@domain</a> :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5099,7 +5133,8 @@ email.add(EmailAddressValidator.getInstance());</code></pre>
 <p>&lt;label&gt; is the value of the label model set on a FormComponent with method setLabel(IModel &lt;String&gt; model). If such model is not provided, component id will be used as the default value.</p>
 </div>
 <div class="paragraph">
-<p>The entire infrastructure of feedback messages is built on top of the Java internationalization (I18N) support and it uses  <a href="http://docs.oracle.com/javase/tutorial/i18n/resbundle/index.html">resource bundles</a> to store messages.</p>
+<p>The entire infrastructure of feedback messages is built on top of the Java internationalization (I18N) support and it uses
+<a href="http://docs.oracle.com/javase/tutorial/i18n/resbundle/index.html">resource bundles</a> to store messages.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -5124,7 +5159,8 @@ The topics of internationalization will be covered in
 <p><em>Required=Field '${label}' is required.</em></p>
 </div>
 <div class="paragraph">
-<p>We can note the key (Required in our case) and the label parameter written in the  <a href="http://en.wikipedia.org/wiki/Expression_Language">expression language</a> (${label}). Scrolling down this file we can also find the message used by the Email AddressValidator:</p>
+<p>We can note the key (Required in our case) and the label parameter written in the
+<a href="http://en.wikipedia.org/wiki/Expression_Language">expression language</a> (${label}). Scrolling down this file we can also find the message used by the Email AddressValidator:</p>
 </div>
 <div class="paragraph">
 <p><em>EmailAddressValidator=The value of '${label}' is not a valid email address.</em></p>
@@ -5160,7 +5196,9 @@ Remember that component model is updated with the user input only if validation 
 </div>
 </div>
 <div class="paragraph">
-<p>CSS classes  [feedbackPanel] and  [feedbackPanelERROR] can be used in order to customize the style of the message list:</p>
+<p>CSS classes
+[feedbackPanel] and
+[feedbackPanelERROR] can be used in order to customize the style of the message list:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -5285,7 +5323,8 @@ Remember that component model is updated with the user input only if validation 
 <div class="sect4">
 <h5 id="creditcardvalidator"><a class="anchor" href="#creditcardvalidator"></a>CreditCardValidator</h5>
 <div class="paragraph">
-<p>Checks if input is a valid credit card number. This validator supports some of the most popular credit cards (like “American Express ["MasterCard] , “Visa” or “Diners Club”).</p>
+<p>Checks if input is a valid credit card number. This validator supports some of the most popular credit cards (like “American Express
+["MasterCard] , “Visa” or “Diners Club”).</p>
 </div>
 <div class="paragraph">
 <p><strong>Message:</strong></p>
@@ -5998,7 +6037,8 @@ Forms can be nested to an arbitrary level:</p>
 <div class="sect2">
 <h3 id="file-upload"><a class="anchor" href="#file-upload"></a>12.8. File upload</h3>
 <div class="paragraph">
-<p>Wicket supports file uploading with the FileUploadField component which must be used with the &lt;input&gt; tag whose type attribute must be set to  [file] In order to send a file on form submission we must enable multipart mode calling MultiPart(true)on our form.</p>
+<p>Wicket supports file uploading with the FileUploadField component which must be used with the &lt;input&gt; tag whose type attribute must be set to
+[file] In order to send a file on form submission we must enable multipart mode calling MultiPart(true)on our form.</p>
 </div>
 <div class="paragraph">
 <p>In the next example (project UploadSingleFile) we will see a form which allows users to upload a file into the temporary directory of the server (path /tmp on Unix/Linux systems):</p>
@@ -6092,8 +6132,10 @@ The maximum size for uploaded files can also be set at application&#8217;s level
 <div class="sect3">
 <h4 id="upload-multiple-files"><a class="anchor" href="#upload-multiple-files"></a>12.8.1. Upload multiple files</h4>
 <div class="paragraph">
-<p>If we need to upload multiple files at once and our clients support HTML5, we can still use FileUploadField adding attribute  [multiple] to its tag. If we can not rely on HTML5, we can use the MultiFileUploadField component which allows the user to upload an arbitrary number of files using a JavaScript-based solution.
-An example showing how to use this component can be found in Wicket module wicket-examples in file MultiUploadPage.java. The live example is hosted at  <a href="http://www.wicket-library.com/wicket-examples-6.0.x/upload/multi">http://www.wicket-library.com/wicket-examples-6.0.x/upload/multi</a> .</p>
+<p>If we need to upload multiple files at once and our clients support HTML5, we can still use FileUploadField adding attribute
+[multiple] to its tag. If we can not rely on HTML5, we can use the MultiFileUploadField component which allows the user to upload an arbitrary number of files using a JavaScript-based solution.
+An example showing how to use this component can be found in Wicket module wicket-examples in file MultiUploadPage.java. The live example is hosted at
+<a href="http://www.wicket-library.com/wicket-examples-6.0.x/upload/multi">http://www.wicket-library.com/wicket-examples-6.0.x/upload/multi</a> .</p>
 </div>
 </div>
 </div>
@@ -6115,7 +6157,8 @@ An example showing how to use this component can be found in Wicket module wicke
 <p>To illustrate this possible scenario, let&#8217;s consider a form where a user can insert a  temperature that will be recorded after being converted to Kelvin degrees (see the example project CustomForm ComponentPanel).</p>
 </div>
 <div class="paragraph">
-<p>The Kelvin scale is wildly adopted among the scientific community and it is one of the seven base units of the  <a href="http://en.wikipedia.org/wiki/International_System_of_Units">International System of Units</a> , so it makes perfect sense to store temperatures expressed with this unit of measurement.</p>
+<p>The Kelvin scale is wildly adopted among the scientific community and it is one of the seven base units of the
+<a href="http://en.wikipedia.org/wiki/International_System_of_Units">International System of Units</a> , so it makes perfect sense to store temperatures expressed with this unit of measurement.</p>
 </div>
 <div class="paragraph">
 <p>However, in our everyday life we still use other temperature scales like Celsius or Fahrenheit, so it would be nice to have a component which internally works with Kelvin degrees and automatically applies conversion between Kelvin temperature scale and the one adopted by the user.</p>
@@ -6342,7 +6385,8 @@ An example showing how to use this component can be found in Wicket module wicke
 </div>
 </div>
 <div class="paragraph">
-<p>A check box can be used as single component to set a boolean property. For this purpose Wicket provides the <em>org.apache.wicket.markup.html.form.CheckBox</em> component which must be attached to &lt;input type= ../&gt;[checkbox] tag. In the next example (project SingleCheckBox) we will consider a form similar to the one used in <a href="#model-chaining">paragraph 11.5</a> to edit a Person object, but with an additional checkbox to let the user decide if she wants to subscribe to our mailing list or not. The form uses the following bean as backing object:</p>
+<p>A check box can be used as single component to set a boolean property. For this purpose Wicket provides the <em>org.apache.wicket.markup.html.form.CheckBox</em> component which must be attached to &lt;input type=
+../&gt;[checkbox] tag. In the next example (project SingleCheckBox) we will consider a form similar to the one used in <a href="#model-chaining">paragraph 11.5</a> to edit a Person object, but with an additional checkbox to let the user decide if she wants to subscribe to our mailing list or not. The form uses the following bean as backing object:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6509,7 +6553,10 @@ ChoiceRenderer render = <span class="keyword">new</span> ChoiceRenderer(<span cl
 </div>
 </div>
 <div class="sect3">
-<h4 id="how-to-implement-a-select-all-checkbox"><a class="anchor" href="#how-to-implement-a-select-all-checkbox"></a>12.11.2. How to implement a  [Select all] checkbox</h4>
+<h4 id="how-to-implement-a"><a class="anchor" href="#how-to-implement-a"></a>12.11.2. How to implement a</h4>
+<div class="paragraph">
+<p>[Select all] checkbox</p>
+</div>
 <div class="paragraph">
 <p>A nice feature we can offer to users when we have a group of checkboxes is a “special” checkbox which selects/unselects all the other options of the group:</p>
 </div>
@@ -6577,8 +6624,12 @@ form.add(<span class="keyword">new</span> RadioChoice(<span class="string"><span
 <div class="sect2">
 <h3 id="selecting-multiple-values-with-listmultiplechoices-and-palette"><a class="anchor" href="#selecting-multiple-values-with-listmultiplechoices-and-palette"></a>12.12. Selecting multiple values with ListMultipleChoices and Palette</h3>
 <div class="paragraph">
-<p>Checkboxes work well when we have a small amount of options to display, but they quickly become chaotic as the number of options increases. To overcome this limit we can use the &lt;select&gt; tag switching it to multiple-choice mode with attribute multiple= [multiple]
-image::../img/list-multiple-choices.png[]</p>
+<p>Checkboxes work well when we have a small amount of options to display, but they quickly become chaotic as the number of options increases. To overcome this limit we can use the &lt;select&gt; tag switching it to multiple-choice mode with attribute multiple=</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/list-multiple-choices.png" alt="multiple">
+</div>
 </div>
 <div class="paragraph">
 <p>Now the user can select multiple options by holding down Ctrl key (or Command key for Mac) and selecting them.</p>
@@ -6615,7 +6666,8 @@ form.add(<span class="keyword">new</span> ListMultipleChoice(<span class="string
 </div>
 </div>
 <div class="paragraph">
-<p>This component must be bound to a &lt;select&gt; tag but the attribute multiple= [multiple] is not required as it will automatically be added by the component.</p>
+<p>This component must be bound to a &lt;select&gt; tag but the attribute multiple=
+[multiple] is not required as it will automatically be added by the component.</p>
 </div>
 <div class="paragraph">
 <p>The number of visible rows can be set with the setMaxRows(int maxRows) method.</p>
@@ -7062,7 +7114,8 @@ add(dataView);</code></pre>
 <p>The data of a single country (ISO code, name, long name, capital and population) are handled with an array of strings. The usage of PagingNavigator it&#8217;s quite straightforward as we need to simply pass the pageable repeater to its constructor.</p>
 </div>
 <div class="paragraph">
-<p>To explore the other pageable repeaters shipped with Wicket you can visit the page at  <a href="http://www.wicket-library.com/wicket-examples/repeater/">http://www.wicket-library.com/wicket-examples/repeater/</a> where you can find live examples of these components.</p>
+<p>To explore the other pageable repeaters shipped with Wicket you can visit the page at
+<a href="http://www.wicket-library.com/wicket-examples/repeater/">http://www.wicket-library.com/wicket-examples/repeater/</a> where you can find live examples of these components.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -7110,7 +7163,8 @@ Wicket provides also component PageableListView which is a sublcass of ListView 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Providing a full description of Java support for i18n is clearly out of the scope of this document. If you need more informations about this topic you can find them in the JavaDocs and in the official  <a href="http://docs.oracle.com/javase/tutorial/i18n/index.html">i18n tutorial</a> .
+Providing a full description of Java support for i18n is clearly out of the scope of this document. If you need more informations about this topic you can find them in the JavaDocs and in the official
+<a href="http://docs.oracle.com/javase/tutorial/i18n/index.html">i18n tutorial</a> .
 </td>
 </tr>
 </table>
@@ -7200,7 +7254,9 @@ Session.get().getStyle();</code></pre>
 <div class="sect3">
 <h4 id="using-utf-8-for-resource-bundles"><a class="anchor" href="#using-utf-8-for-resource-bundles"></a>14.2.2. Using UTF-8 for resource bundles</h4>
 <div class="paragraph">
-<p>Java uses the standard character set  <a href="http://en.wikipedia.org/wiki/ISO/IEC_8859-1">ISO 8859-11</a> to encode text files like properties files. Unfortunately ISO 8859-1 does not support most of the extra-European languages like Chinese or Japanese. The only way to use properties files with such languages is to use escaped  <a href="http://en.wikipedia.org/wiki/List_of_Unicode_characters">Unicode</a> characters, but this leads to not human-readable files. For example if we wanted to write the word 'website' in simplified Chinese (the ideograms are 网站) we should write the Unicode characters <em>\u7F51\u7AD9</em>.
+<p>Java uses the standard character set
+<a href="http://en.wikipedia.org/wiki/ISO/IEC_8859-1">ISO 8859-11</a> to encode text files like properties files. Unfortunately ISO 8859-1 does not support most of the extra-European languages like Chinese or Japanese. The only way to use properties files with such languages is to use escaped
+<a href="http://en.wikipedia.org/wiki/List_of_Unicode_characters">Unicode</a> characters, but this leads to not human-readable files. For example if we wanted to write the word 'website' in simplified Chinese (the ideograms are 网站) we should write the Unicode characters <em>\u7F51\u7AD9</em>.
 For this reason ISO 8859-11 is being replaced with another Unicode-compliant character encoding called UTF-8. Text files created with this encoding can contain Unicode symbols in plain format.
 Wicket provides a useful convention to use properties file encoded with UTF-8. We just have to add prefix <em>.utf8.</em> to file extension (i.e. <em>.utf8.properties</em>).</p>
 </div>
@@ -7220,7 +7276,8 @@ If you want to use UTF-8 with your text files, make sure that your editor/IDE is
 <div class="sect3">
 <h4 id="using-xml-files-as-resource-bundles"><a class="anchor" href="#using-xml-files-as-resource-bundles"></a>14.2.3. Using XML files as resource bundles</h4>
 <div class="paragraph">
-<p>Starting from version 1.5, Java introduced the support for XML files as resource bundles. XML files are generally encoded with character sets UTF-8 or UTF-16 which support every symbol of the Unicode standard. In order to be a valid resource bundle the XML file must conform to the DTD available at  <a href="http://www.oracle.com/webfolder/technetwork/jsc/dtd/properties.dtd">http://www.oracle.com/webfolder/technetwork/jsc/dtd/properties.dtd</a> .</p>
+<p>Starting from version 1.5, Java introduced the support for XML files as resource bundles. XML files are generally encoded with character sets UTF-8 or UTF-16 which support every symbol of the Unicode standard. In order to be a valid resource bundle the XML file must conform to the DTD available at
+<a href="http://www.oracle.com/webfolder/technetwork/jsc/dtd/properties.dtd">http://www.oracle.com/webfolder/technetwork/jsc/dtd/properties.dtd</a> .</p>
 </div>
 <div class="paragraph">
 <p>Here is an example of XML resource bundle taken from project LocalizedGreetings (file WicketApplication_zh.properties.xml) containing the translation in simplified Chinese of the greeting message “Welcome to the website!”:</p>
@@ -7922,7 +7979,8 @@ Package resources can be localized following the same rules seen for resource bu
 <p><strong>StringHeaderItem:</strong> with this class we can add an arbitrary text to the header section. Factory method is <em>forString(CharSequence string)</em>.</p>
 </li>
 <li>
-<p><strong>MetaDataHeaderItem:</strong> starting from version 6.17.0, Wicket provides this class to handle meta informations such as &lt;meta&gt; tags or <a href="http://en.wikipedia.org/wiki/Canonical_link_element">canonical link element</a></p>
+<p><strong>MetaDataHeaderItem:</strong> starting from version 6.17.0, Wicket provides this class to handle meta informations such as &lt;meta&gt; tags or
+<a href="http://en.wikipedia.org/wiki/Canonical_link_element">canonical link element</a></p>
 </li>
 <li>
 <p><strong>HtmlImportHeaderItem:</strong> introduced in Wicket 6.19.0, provides a HTML5 functionality to include other wicket pages (other html files) into the current generated. Factory methods provided by this class are <em>forImportLinkTag</em> which takes the page class or the url of the page / html to be included.</p>
@@ -8134,7 +8192,9 @@ The following code is taken from the Application class of the project:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>As you can see in the code above the  [bucket] that will contain JavaScript tags is called _ .[footer-container] To make a use of it the developer have to add a special component called <em>HeaderResponseContainer</em> in his page:</p>
+<p>As you can see in the code above the
+[bucket] that will contain JavaScript tags is called _
+.[footer-container] To make a use of it the developer have to add a special component called <em>HeaderResponseContainer</em> in his page:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -8547,7 +8607,9 @@ body{
 <h2 id="an-example-of-integration-with-javascript"><a class="anchor" href="#an-example-of-integration-with-javascript"></a>16. An example of integration with JavaScript</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>It&#8217;s time to put into practice what we have learnt so far in this guide. To do this we will build a custom date component consisting of a text field to edit a date value and a fancy calendar icon to open a JavaScript datepicker. This chapter will also illustrate an example of integration of Wicket with a JavaScript library like  <a href="http://jquery.com/">JQuery</a> and its child project  <a href="http://jqueryui.com/">JQuery UI</a> .</p>
+<p>It&#8217;s time to put into practice what we have learnt so far in this guide. To do this we will build a custom date component consisting of a text field to edit a date value and a fancy calendar icon to open a JavaScript datepicker. This chapter will also illustrate an example of integration of Wicket with a JavaScript library like
+<a href="http://jquery.com/">JQuery</a> and its child project
+<a href="http://jqueryui.com/">JQuery UI</a> .</p>
 </div>
 <div class="sect2">
 <h3 id="what-we-want-to-do"><a class="anchor" href="#what-we-want-to-do"></a>16.1. What we want to do&#8230;&#8203;</h3>
@@ -8809,7 +8871,8 @@ Our datepicker is not ready yet to be used with AJAX. In
 <div class="sect2">
 <h3 id="summary-13"><a class="anchor" href="#summary-13"></a>16.3. Summary</h3>
 <div class="paragraph">
-<p>In this brief chapter we have seen how custom components can be integrated with <a href="http://en.wikipedia.org/wiki/Dynamic_HTML">DHTML</a></p>
+<p>In this brief chapter we have seen how custom components can be integrated with
+<a href="http://en.wikipedia.org/wiki/Dynamic_HTML">DHTML</a></p>
 </div>
 </div>
 </div>
@@ -9351,7 +9414,8 @@ Implementing interface <em>IBehaviorListener</em> makes a behavior stateful beca
 <p>AJAX has become a must-have for nearly all kinds of web application. This technology does not only help to achieve a better user experience but it also allows to improve the bandwidth performance of web applications. Using AJAX usually means writing tons of JavaScript code to handle asynchronous requests and to update user interface, but with Wicket we can leave all this boilerplate code to the framework and we don&#8217;t even need to write a single line of JavaScript to start using AJAX.</p>
 </div>
 <div class="paragraph">
-<p>In this chapter we will learn how to leverage the AJAX support provided by Wicket to make our applications fully  <a href="http://en.wikipedia.org/wiki/Web_2.0">Web 2.0</a> compliant.</p>
+<p>In this chapter we will learn how to leverage the AJAX support provided by Wicket to make our applications fully
+<a href="http://en.wikipedia.org/wiki/Web_2.0">Web 2.0</a> compliant.</p>
 </div>
 <div class="sect2">
 <h3 id="how-to-use-ajax-components-and-behaviors"><a class="anchor" href="#how-to-use-ajax-components-and-behaviors"></a>18.1. How to use AJAX components and behaviors</h3>
@@ -9554,7 +9618,8 @@ During request handling <em>AjaxRequestHandler</em> sends an event to its applic
 </ul>
 </div>
 <div class="paragraph">
-<p>Wicket module wicket-examples contains page class <em>EditableLabelPage.java</em> which shows all these three components together. You can see this page in action at  <a href="http://www.wicket-library.com/wicket-examples-6.0.x/ajax/editable-label">http://www.wicket-library.com/wicket-examples-6.0.x/ajax/editable-label</a> :</p>
+<p>Wicket module wicket-examples contains page class <em>EditableLabelPage.java</em> which shows all these three components together. You can see this page in action at
+<a href="http://www.wicket-library.com/wicket-examples-6.0.x/ajax/editable-label">http://www.wicket-library.com/wicket-examples-6.0.x/ajax/editable-label</a> :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -9603,13 +9668,15 @@ AutoCompleteTextField field = <span class="keyword">new</span> AutoCompleteTextF
 </div>
 </div>
 <div class="paragraph">
-<p>Wicket module wicket-examples contains page class <em>AutoCompletePagePage.java</em> which shows an example of autocomplete text field. The running example is available at  <a href="http://www.wicket-library.com/wicket-examples-6.0.x/ajax/autocomplete">http://www.wicket-library.com/wicket-examples-6.0.x/ajax/autocomplete</a> .</p>
+<p>Wicket module wicket-examples contains page class <em>AutoCompletePagePage.java</em> which shows an example of autocomplete text field. The running example is available at
+<a href="http://www.wicket-library.com/wicket-examples-6.0.x/ajax/autocomplete">http://www.wicket-library.com/wicket-examples-6.0.x/ajax/autocomplete</a> .</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="modal-window"><a class="anchor" href="#modal-window"></a>18.2.6. Modal window</h4>
 <div class="paragraph">
-<p>Class <em>org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow</em> is an implementation of a  <a href="http://en.wikipedia.org/wiki/Modal_window">modal window</a> based on AJAX:</p>
+<p>Class <em>org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow</em> is an implementation of a
+<a href="http://en.wikipedia.org/wiki/Modal_window">modal window</a> based on AJAX:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -10152,7 +10219,8 @@ As side effect AJAX components and behaviors make their hosting page stateful. A
 <p>Starting from version 6.0 Wicket has introduced two entities which allow us to control how an AJAX request is generated on client side and to specify the custom JavaScript code we want to execute during request handling. These entities are class <em>AjaxRequestAttributes</em> and interface <em>IAjaxCallListener</em>, both placed in package <em>org.apache.wicket.ajax.attributes</em>.</p>
 </div>
 <div class="paragraph">
-<p>AjaxRequestAttributes exposes the attributes used to generate the JavaScript call invoked on client side to start an AJAX request. Each attribute will be passed as a  <a href="http://en.wikipedia.org/wiki/JSON">JSON</a> parameter to the JavaScript function <em>Wicket.Ajax.ajax</em> which is responsible for sending the concrete AJAX request. Every JSON parameter is identified by a short name. Here is a partial list of the available parameters:</p>
+<p>AjaxRequestAttributes exposes the attributes used to generate the JavaScript call invoked on client side to start an AJAX request. Each attribute will be passed as a
+<a href="http://en.wikipedia.org/wiki/JSON">JSON</a> parameter to the JavaScript function <em>Wicket.Ajax.ajax</em> which is responsible for sending the concrete AJAX request. Every JSON parameter is identified by a short name. Here is a partial list of the available parameters:</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -10225,7 +10293,8 @@ As side effect AJAX components and behaviors make their hosting page stateful. A
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-A full list of the available request parameters as well as more details on the related JavaScript code can be found at  <a href="https://cwiki.apache.org/confluence/display/WICKET/Wicket+Ajax">https://cwiki.apache.org/confluence/display/WICKET/Wicket+Ajax</a> .
+A full list of the available request parameters as well as more details on the related JavaScript code can be found at
+<a href="https://cwiki.apache.org/confluence/display/WICKET/Wicket+Ajax">https://cwiki.apache.org/confluence/display/WICKET/Wicket+Ajax</a> .
 </td>
 </tr>
 </table>
@@ -10334,7 +10403,8 @@ A full list of the available request parameters as well as more details on the r
 <p>The listener will implement methods <em>getBeforeHandler</em> and <em>getAfterHandler</em>: the first will return the code needed to place an overlay &lt;div&gt; on the desired component while the second must remove this overlay when the AJAX call has completed.</p>
 </div>
 <div class="paragraph">
-<p>To move and resize the overlay area we will use another module from  <a href="http://jqueryui.com/position/">JQueryUI library</a> that allows us to position DOM elements on our page relative to another element.</p>
+<p>To move and resize the overlay area we will use another module from
+<a href="http://jqueryui.com/position/">JQueryUI library</a> that allows us to position DOM elements on our page relative to another element.</p>
 </div>
 <div class="paragraph">
 <p>So our listener will depend on four static resources: the JQuery library, the position module of JQuery UI, the custom code used to move the overlay &lt;div&gt; and the picture used as activity indicator. Except for the activity indicator, all these resources must be added to page header section in order to be used.</p>
@@ -10564,19 +10634,25 @@ A full list of the available request parameters as well as more details on the r
 <p>Writing a web application is not just about producing a good layout and a bunch of “cool” pages. We must also integrate our presentation code with enterprise resources like data sources, message queues, business objects, etc&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>The first decade of 2000s has seen the rising of new frameworks (like  <a href="http://spring.io/">Spring</a> ) and new specifications (like  <a href="http://en.wikipedia.org/wiki/Enterprise_JavaBeans">EJB 3.1</a> ) aimed to simplify the management of enterprise resources and (among other things) their integration with presentation code.</p>
+<p>The first decade of 2000s has seen the rising of new frameworks (like
+<a href="http://spring.io/">Spring</a> ) and new specifications (like
+<a href="http://en.wikipedia.org/wiki/Enterprise_JavaBeans">EJB 3.1</a> ) aimed to simplify the management of enterprise resources and (among other things) their integration with presentation code.</p>
 </div>
 <div class="paragraph">
-<p>All these new technologies are based on the concepts of container and dependency injection. Container is the environment where our enterprise resources are created and configured while   <a href="http://en.wikipedia.org/wiki/Dependency_Injection">dependency injection</a> is a pattern implemented by containers to inject into an object the resources it depends on.</p>
+<p>All these new technologies are based on the concepts of container and dependency injection. Container is the environment where our enterprise resources are created and configured while
+<a href="http://en.wikipedia.org/wiki/Dependency_Injection">dependency injection</a> is a pattern implemented by containers to inject into an object the resources it depends on.</p>
 </div>
 <div class="paragraph">
 <p>Wicket can be easily integrated with enterprise containers using component instantiation listeners. These entities are instances of interface <em>org.apache.wicket.application.IComponentInstantiationListener</em> and can be registered during application&#8217;s initialization.   IComponentInstantiationListener defines callback method onInstantiation(Component component) which can be used to provide custom instantiation logic for Wicket components.</p>
 </div>
 <div class="paragraph">
-<p>Wicket distribution and project  <a href="https://github.com/wicketstuff">WicketStuff</a> already provide a set of built-in listeners to integrate our applications with EJB 3.1 compliant containers (like JBoss Seam) or with some of the most popular enterprise frameworks like  <a href="http://code.google.com/p/google-guice/">Guice</a> or Spring.</p>
+<p>Wicket distribution and project
+<a href="https://github.com/wicketstuff">WicketStuff</a> already provide a set of built-in listeners to integrate our applications with EJB 3.1 compliant containers (like JBoss Seam) or with some of the most popular enterprise frameworks like
+<a href="http://code.google.com/p/google-guice/">Guice</a> or Spring.</p>
 </div>
 <div class="paragraph">
-<p>In this chapter we will see two basic examples of injecting a container-defined object into a page using first an implementation of the EJB 3.1 specifications (project  <a href="http://openejb.apache.org/">OpenEJB</a> ) and then using Spring.</p>
+<p>In this chapter we will see two basic examples of injecting a container-defined object into a page using first an implementation of the EJB 3.1 specifications (project
+<a href="http://openejb.apache.org/">OpenEJB</a> ) and then using Spring.</p>
 </div>
 <div class="sect2">
 <h3 id="integrating-wicket-with-ejb"><a class="anchor" href="#integrating-wicket-with-ejb"></a>19.1. Integrating Wicket with EJB</h3>
@@ -10718,7 +10794,8 @@ A full list of the available request parameters as well as more details on the r
 <div class="sect2">
 <h3 id="jsr-330-annotations"><a class="anchor" href="#jsr-330-annotations"></a>19.3. JSR-330 annotations</h3>
 <div class="paragraph">
-<p>Spring (and Guice) users can use standard  <a href="http://jcp.org/en/jsr/detail?id=330">JSR-330</a> annotations to wire their dependencies. This will make their code more interoperable with other containers that support this standard:</p>
+<p>Spring (and Guice) users can use standard
+<a href="http://jcp.org/en/jsr/detail?id=330">JSR-330</a> annotations to wire their dependencies. This will make their code more interoperable with other containers that support this standard:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10745,7 +10822,8 @@ A full list of the available request parameters as well as more details on the r
 This means that once the browser establish a web socket connection to the server the server can push data back to the browser without the browser explicitly asking again and again whether there is something new for it.</p>
 </div>
 <div class="paragraph">
-<p>Wicket Native WebSockets modules provide functionality to integrate with the non-standard APIs provided by different web containers (like <a href="http://tomcat.apache.org/">Apache Tomcat</a></p>
+<p>Wicket Native WebSockets modules provide functionality to integrate with the non-standard APIs provided by different web containers (like
+<a href="http://tomcat.apache.org/">Apache Tomcat</a></p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -10756,7 +10834,8 @@ This means that once the browser establish a web socket connection to the server
 <td class="content">
 Native WebSocket works only when both the browser and the web containers support WebSocket technology. There are no plans to add support to fallback to long-polling, streaming or any other technology that simulates two way communication. Use it only if you really know that you will run your application in an environment that supports WebSockets.
 Currently supported web containers are Jetty 7.5+ , Tomcat 7.0.27+ and JBoss WildFly 8.0.0+.
-Supported browsers can be found at <a href="http://caniuse.com/#search=websocket">caniuse.com</a>
+Supported browsers can be found at
+<a href="http://caniuse.com/#search=websocket">caniuse.com</a>
 </td>
 </tr>
 </table>
@@ -10764,7 +10843,8 @@ Supported browsers can be found at <a href="http://caniuse.com/#search=websocket
 <div class="sect2">
 <h3 id="how-does-it-work"><a class="anchor" href="#how-does-it-work"></a>20.1. How does it work ?</h3>
 <div class="paragraph">
-<p>Each of the modules provide a specialization of <em>org.apache.wicket.protocol.http.WicketFilter</em> that registers implementation specific endpoint when an HTTP request is <a href="http://en.wikipedia.org/wiki/WebSocket#WebSocket_protocol_handshake">upgraded</a></p>
+<p>Each of the modules provide a specialization of <em>org.apache.wicket.protocol.http.WicketFilter</em> that registers implementation specific endpoint when an HTTP request is
+<a href="http://en.wikipedia.org/wiki/WebSocket#WebSocket_protocol_handshake">upgraded</a></p>
 </div>
 <div class="paragraph">
 <p>WebSockets communication can be used in a Wicket page by using <em>org.apache.wicket.protocol.ws.api.WebSocketBehavior</em> or in a IResource by exteding <em>org.apache.wicket.protocol.ws.api.WebSocketResource</em>.
@@ -10872,7 +10952,8 @@ use <em>wicket-native-websocket-javax</em> together with the latest version of W
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The examples above show snippets for Maven&#8217;s pom.xml but the application can use any other dependency management tool like <a href="http://www.gradle.org/">Gradle</a>
+The examples above show snippets for Maven&#8217;s pom.xml but the application can use any other dependency management tool like
+<a href="http://www.gradle.org/">Gradle</a>
 </td>
 </tr>
 </table>
@@ -11089,13 +11170,15 @@ Once a page that contributes <em>(Base)WebSocketBehavior</em> is rendered the cl
 <h3 id="testing"><a class="anchor" href="#testing"></a>20.4. Testing</h3>
 <div class="paragraph">
 <p>The module provides <em>org.apache.wicket.protocol.ws.util.tester.WebSocketTester</em> which gives you the possibility to emulate sending and receiving messages without the need to run in a real web container, as WicketTester does this for HTTP requests.
-Check <a href="https://github.com/apache/wicket/blob/master/wicket-native-websocket/wicket-native-websocket-core/src/test/java/org/apache/wicket/protocol/ws/util/tester/WebSocketTesterBehaviorTest.java?source=c">WebSocketTesterBehaviorTest</a></p>
+Check
+<a href="https://github.com/apache/wicket/blob/master/wicket-native-websocket/wicket-native-websocket-core/src/test/java/org/apache/wicket/protocol/ws/util/tester/WebSocketTesterBehaviorTest.java?source=c">WebSocketTesterBehaviorTest</a></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="differences-with-wicket-atmosphere-module"><a class="anchor" href="#differences-with-wicket-atmosphere-module"></a>20.5. Differences with Wicket-Atmosphere module.</h3>
 <div class="paragraph">
-<p>Wicket-Atmosphere experimental module provides integration with <a href="https://github.com/Atmosphere/atmosphere">Atmosphere</a></p>
+<p>Wicket-Atmosphere experimental module provides integration with
+<a href="https://github.com/Atmosphere/atmosphere">Atmosphere</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -11804,7 +11887,8 @@ Application class <em>AuthenticatedWebApplication</em> already sets <em>MetaData
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-For better security it is recommended to install Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Policy Files</a>
+For better security it is recommended to install Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">Policy Files</a>
 </td>
 </tr>
 </table>
@@ -11858,8 +11942,10 @@ For better security it is recommended to install Java Cryptography Extension (JC
 </div>
 <div class="paragraph">
 <p>Since version 6.19.0 Wicket uses <em>org.apache.wicket.core.util.crypt.KeyInSessionSunJceCryptFactory</em> as a default factory for <em>ICrypt</em> objects. This factory generates a unique key for each user that is stored in her HTTP
-session. This way it helps to protect the application against <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">CSRF</a>
-for each user of the application. The url itself serves as <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet#Encrypted_Token_Pattern">encrypted token</a></p>
+session. This way it helps to protect the application against
+<a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">CSRF</a>
+for each user of the application. The url itself serves as
+<a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet#Encrypted_Token_Pattern">encrypted token</a></p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -11929,7 +12015,9 @@ implementation of <em>ICryptFactory</em> that stores the user specific keys by o
 <div class="ulist">
 <ul>
 <li>
-<p>patterns start with either a  [+] or a  [-] In the first case the pattern will add one or more file to the set while starting a pattern with a “-” we exclude all the files matching the given pattern. For example pattern “-web.xml” excludes all web.xml files in all directories.</p>
+<p>patterns start with either a
+[+] or a
+[-] In the first case the pattern will add one or more file to the set while starting a pattern with a “-” we exclude all the files matching the given pattern. For example pattern “-web.xml” excludes all web.xml files in all directories.</p>
 </li>
 <li>
 <p>wildcard character “*” is supported as placeholder for zero or more characters. For example  pattern “+\*.mp4” adds all the mp4 files inside all directories.</p>
@@ -11988,10 +12076,8 @@ implementation of <em>ICryptFactory</em> that stores the user specific keys by o
 <div class="sect1">
 <h2 id="test-driven-development-with-wicket"><a class="anchor" href="#test-driven-development-with-wicket"></a>22. Test Driven Development with Wicket</h2>
 <div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>http://en.wikipedia.org/wiki/Test-driven_development[Test Driven Development] has become a crucial activity for every modern development methodology. This chapter will cover the built-in support for testing provided by Wicket with its rich set of helper and mock classes that allows us to test our components and our applications in isolation (i.e without the need for a servlet container) using JUnit, the de facto standard for Java unit testing.</pre>
-</div>
+<div class="paragraph">
+<p><a href="http://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a> has become a crucial activity for every modern development methodology. This chapter will cover the built-in support for testing provided by Wicket with its rich set of helper and mock classes that allows us to test our components and our applications in isolation (i.e without the need for a servlet container) using JUnit, the de facto standard for Java unit testing.</p>
 </div>
 <div class="paragraph">
 <p>In this chapter we will see how to write unit tests for our applications and components and we will learn how to use helper classes to simulate user navigation and write acceptance tests without the need of any testing framework other than JUnit.</p>
@@ -12049,7 +12135,9 @@ implementation of <em>ICryptFactory</em> that stores the user specific keys by o
 <p>A click on a Wicket link can be simulated with method <em>clickLink</em> which takes in input the link component or the page-relative path to it.</p>
 </div>
 <div class="paragraph">
-<p>To see an example of usage of clickLink, let&#8217;s consider again project <em>LifeCycleStagesRevisited</em>. As we know from chapter 5 the home page of the project alternately displays two different labels (“First label” and “Second label”), swapping between them each time button  [reload] is clicked. The code from its test case checks that label has actually changed after button  [reload] has been pressed:</p>
+<p>To see an example of usage of clickLink, let&#8217;s consider again project <em>LifeCycleStagesRevisited</em>. As we know from chapter 5 the home page of the project alternately displays two different labels (“First label” and “Second label”), swapping between them each time button
+[reload] is clicked. The code from its test case checks that label has actually changed after button
+[reload] has been pressed:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12071,7 +12159,8 @@ implementation of <em>ICryptFactory</em> that stores the user specific keys by o
 </div>
 </div>
 <div class="paragraph">
-<p>In the code above we have used <em>clickLink</em> to click on the  [reload] button and force page to be rendered again. In addition, we have used also method <em>assertLabel</em> that checks if a given label contains the expected text.</p>
+<p>In the code above we have used <em>clickLink</em> to click on the
+[reload] button and force page to be rendered again. In addition, we have used also method <em>assertLabel</em> that checks if a given label contains the expected text.</p>
 </div>
 <div class="paragraph">
 <p>By default <em>clickLink</em> assumes that AJAX is enabled on client side. To switch AJAX off we can use another version of this method that takes in input the path to the link component and a boolean flag that indicates if AJAX must be enabled (true) or not (false).</p>
@@ -12104,7 +12193,8 @@ tester.clickLink(<span class="string"><span class="delimiter">&quot;</span><span
 </ul>
 </div>
 <div class="paragraph">
-<p>In the test case from project <em>CustomDatepickerAjax</em> we used <em>assertEnabled</em>/<em>assertDisabled</em> to check if button  [update] really disables our datepicker:</p>
+<p>In the test case from project <em>CustomDatepickerAjax</em> we used <em>assertEnabled</em>/<em>assertDisabled</em> to check if button
+[update] really disables our datepicker:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12681,7 +12771,8 @@ indexes)</strong>: selects all the options corresponding to the given array of i
 <div class="sect2">
 <h3 id="configuration-of-the-junit-based-integration-test-environment"><a class="anchor" href="#configuration-of-the-junit-based-integration-test-environment"></a>23.2. Configuration of the JUnit based integration test environment</h3>
 <div class="paragraph">
-<p>One of the main features of Apache Wicket framework is the ability to easily write and run plain unit tests for your Pages and all other kinds of Components that even include the verification of the rendering process itself by using JUnit framework and the WicketTester API only. When using Spring framework for application configuration together with Wicket, as we do, you can even use the same tools to easily write and run full blown integration tests for your web application as well. All you have to do is use  <a href="http://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/testing.html#testcontext-framework">Spring&#8217;s TestContext</a> framework additionally to configure and run your JUnit based integration tests. The Spring Framework provides a set of Spring specific annotations that you can use in your integration tests in conjunction with the TestContext framework itself in order to easily configure an according ApplicationContext instance for your tests as well as for appropriate transaction management before, during and after your test execution. Following code snippet represents a simple JUnit 4 based test case using Spring&#8217;s specific annotations in order to initialize an ApplicationContext instance prior to executing the test itself:</p>
+<p>One of the main features of Apache Wicket framework is the ability to easily write and run plain unit tests for your Pages and all other kinds of Components that even include the verification of the rendering process itself by using JUnit framework and the WicketTester API only. When using Spring framework for application configuration together with Wicket, as we do, you can even use the same tools to easily write and run full blown integration tests for your web application as well. All you have to do is use
+<a href="http://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/testing.html#testcontext-framework">Spring&#8217;s TestContext</a> framework additionally to configure and run your JUnit based integration tests. The Spring Framework provides a set of Spring specific annotations that you can use in your integration tests in conjunction with the TestContext framework itself in order to easily configure an according ApplicationContext instance for your tests as well as for appropriate transaction management before, during and after your test execution. Following code snippet represents a simple JUnit 4 based test case using Spring&#8217;s specific annotations in order to initialize an ApplicationContext instance prior to executing the test itself:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12794,7 +12885,8 @@ indexes)</strong>: selects all the options corresponding to the given array of i
 </div>
 </div>
 <div class="paragraph">
-<p>In order to use this constructor instead of the one we used previously, we now obviously need to get hold of the <em>ApplicationContext</em> instance on our own in our <em>MyWebApplication</em> implementation. The easiest way to do this is to use Spring&#8217;s own concept of  <a href="http://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-factory-aware">lifecycle callbacks</a> provided to the beans managed by the Spring container. Since our <em>MyWebApplication</em> is also a bean managed by the Spring container at runtime (enabled by the classpath scanning and <em>\_Component</em> annotation on a type level), we can declare it to implement <em>ApplicationContextAware</em> interface which ensures that it gets provided with the <em>ApplicationContext</em> instance that it runs in by the Spring container itself during startup.</p>
+<p>In order to use this constructor instead of the one we used previously, we now obviously need to get hold of the <em>ApplicationContext</em> instance on our own in our <em>MyWebApplication</em> implementation. The easiest way to do this is to use Spring&#8217;s own concept of
+<a href="http://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-factory-aware">lifecycle callbacks</a> provided to the beans managed by the Spring container. Since our <em>MyWebApplication</em> is also a bean managed by the Spring container at runtime (enabled by the classpath scanning and <em>\_Component</em> annotation on a type level), we can declare it to implement <em>ApplicationContextAware</em> interface which ensures that it gets provided with the <em>ApplicationContext</em> instance that it runs in by the Spring container itself during startup.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12995,7 +13087,12 @@ indexes)</strong>: selects all the options corresponding to the given array of i
 <p>For many developers, naming is a dispensable thing, but I think it is one of the major topics in software development. With the help of correct naming, you can easily identify the business aspects of a software component. Additionally good naming avoids unneccessary and bad comments.</p>
 </div>
 <div class="paragraph">
-<p>Bad namings for Wicket-IDs are <em>birthdateTextField</em>, <em>firstnameField</em> and <em>addressPanel</em>. Why? The naming contains two aspects: A technical aspect (_ )[TextField] and the business aspect (_ ).[birthdate] Only the the business aspect is relevant because both the HTML template as well as the Java code already contain the technical details ( [")@)] xtField( [")@)] te [)@)] Additionally, such names add a lot of effort when you do technical refactorings, e.g. if you have to replace a <em>TextField</em> by a <em>DatePicker</em> and the Wicket ID <em>birthdateTextField</em> becomes <em>birthdateDatePicker</em>. Another reason for avoiding technical aspects in Wicket IDs is the <em>CompoundPropertyModel</em>. This model delegates the properties to its child components named by Wicket IDs (see listing 3). For example the <em>TextField username</em> automatically calls <em>setUsername()</em> and <em>getUsername()</em> on the <em>Registration</em> object. A setter like <em>setUsernameTextfield()</em> would be very inconvenient here.</p>
+<p>Bad namings for Wicket-IDs are <em>birthdateTextField</em>, <em>firstnameField</em> and <em>addressPanel</em>. Why? The naming contains two aspects: A technical aspect (_
+)[TextField] and the business aspect (_
+).[birthdate] Only the the business aspect is relevant because both the HTML template as well as the Java code already contain the technical details (
+[")@)] xtField(
+[")@)] te
+[)@)] Additionally, such names add a lot of effort when you do technical refactorings, e.g. if you have to replace a <em>TextField</em> by a <em>DatePicker</em> and the Wicket ID <em>birthdateTextField</em> becomes <em>birthdateDatePicker</em>. Another reason for avoiding technical aspects in Wicket IDs is the <em>CompoundPropertyModel</em>. This model delegates the properties to its child components named by Wicket IDs (see listing 3). For example the <em>TextField username</em> automatically calls <em>setUsername()</em> and <em>getUsername()</em> on the <em>Registration</em> object. A setter like <em>setUsernameTextfield()</em> would be very inconvenient here.</p>
 </div>
 </div>
 <div class="sect2">
@@ -13018,7 +13115,8 @@ indexes)</strong>: selects all the options corresponding to the given array of i
 </div>
 </div>
 <div class="paragraph">
-<p>Instead of constructing <em>LoginBoxPanel</em> conditionally, it is recommended to always add the panel  and control the visibility by overriding <em>isVisible()</em>. So the component <em>LoginBoxPanel</em> is responsible for displaying itself. We move the responsibility into the same component which executes the login. Brilliant! Cleanly encapsulated business logic. There is no decision from outside, the component handles all the logic. You can see another example in  [Implement visibilities of components correctly] .</p>
+<p>Instead of constructing <em>LoginBoxPanel</em> conditionally, it is recommended to always add the panel  and control the visibility by overriding <em>isVisible()</em>. So the component <em>LoginBoxPanel</em> is responsible for displaying itself. We move the responsibility into the same component which executes the login. Brilliant! Cleanly encapsulated business logic. There is no decision from outside, the component handles all the logic. You can see another example in
+[Implement visibilities of components correctly] .</p>
 </div>
 </div>
 <div class="sect2">
@@ -13038,7 +13136,12 @@ add(loginBox);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Listing 6 shows a poor implementation, because a decision about the visibility is made while instanciating the component. Again, in Wicket instances of components exist for several requests. To reuse the same instance you have to call <em>loginBox.setVisible(false)</em>. This is very unhandy, because we always have to call <em>setVisible()</em> and manage the visibility. Furthermore you are going to duplicate the states, because visible is equal to  [not logged in] So we have two saved states, one for the business aspect  [not logged in] and one for the technical aspect  [visible] Both is always equal. This approach is error-prone and fragile, because we always have to pay attention to setting the correct information every time. But this is often forgotten because the logic is widely spread over the code. The solution is the Hollywood principle:  [Don&#8217;t call us, we&#8217;ll call you.] Take a look at the following diagram illustrating an application flow with some calls. We avoid three calls through the  <a href="http://en.wikipedia.org/wiki/Hollywood_Principle">Hollywood-Principle</a> and we just have to instanciate the <em>LoginBoxPanel</em>.</p>
+<p>Listing 6 shows a poor implementation, because a decision about the visibility is made while instanciating the component. Again, in Wicket instances of components exist for several requests. To reuse the same instance you have to call <em>loginBox.setVisible(false)</em>. This is very unhandy, because we always have to call <em>setVisible()</em> and manage the visibility. Furthermore you are going to duplicate the states, because visible is equal to
+[not logged in] So we have two saved states, one for the business aspect
+[not logged in] and one for the technical aspect
+[visible] Both is always equal. This approach is error-prone and fragile, because we always have to pay attention to setting the correct information every time. But this is often forgotten because the logic is widely spread over the code. The solution is the Hollywood principle:
+[Don&#8217;t call us, we&#8217;ll call you.] Take a look at the following diagram illustrating an application flow with some calls. We avoid three calls through the
+<a href="http://en.wikipedia.org/wiki/Hollywood_Principle">Hollywood-Principle</a> and we just have to instanciate the <em>LoginBoxPanel</em>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -13060,7 +13163,8 @@ add(loginBox);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Now the control over visibility has been inverted, the <em>LoginBoxPanel</em> decides on its visibility autonomously. For each call of <em>isVisible()</em> there is a refreshed interpretion of the login state. Hence, there is no additional state that might be outdated. The logic is centralized in one line code and not spread throughout the application. Furthermore, you can easily identify that the technical aspect <em>isVisible()</em> correlates to the business aspect  [logged in] The same rules can be applied to the method <em>isEnabled()</em>. If <em>isEnabled()</em> returns false the components get displayed in gray. Forms which are within an inactive or invisible component do not get executed.</p>
+<p>Now the control over visibility has been inverted, the <em>LoginBoxPanel</em> decides on its visibility autonomously. For each call of <em>isVisible()</em> there is a refreshed interpretion of the login state. Hence, there is no additional state that might be outdated. The logic is centralized in one line code and not spread throughout the application. Furthermore, you can easily identify that the technical aspect <em>isVisible()</em> correlates to the business aspect
+[logged in] The same rules can be applied to the method <em>isEnabled()</em>. If <em>isEnabled()</em> returns false the components get displayed in gray. Forms which are within an inactive or invisible component do not get executed.</p>
 </div>
 <div class="paragraph">
 <p>Note that there are cases in which you cannot avoid to call the methods <em>setVisible()</em> and <em>setEnabled()</em>. An example: The user presses a button to display an inlined registration form. In general, you can apply the following rules: data driven components override these methods and delegates to the data model. User triggered events call the method <em>setVisible(boolean)</em>. You can also override these methods with inline implementations:</p>
@@ -13081,7 +13185,8 @@ add(loginBox);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Note:</strong> Some people insist on overriding <em>isVisible()</em> being <a href="http://www.mail-archive.com/dev\@wicket.apache.org/msg07123.html">a bad thing</a></p>
+<p><strong>Note:</strong> Some people insist on overriding <em>isVisible()</em> being
+<a href="http://www.mail-archive.com/dev\@wicket.apache.org/msg07123.html">a bad thing</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -13328,7 +13433,8 @@ add(settings);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The label in listing 16 is clearly encapsulated in a component without using a factory. Now you can easily create inline implementations and override <em>isVisible()</em> or other stuff. Naturally, you might claim  [I need a factory to initialize some values in the component, e.g. a Spring service.] For this you can create a implementation of <em>IComponentInstantiationListener</em>. This listener gets called on the super-constructor of every component. The most popular implementation of this interface is the <em>SpringComponentInjector</em> which injects Spring beans in components when the fields are annotated with <em>\_SpringBean</em>. You can easliy write and add your own implementation of <em>IComponentInstantiationListener</em>. So there is no reason for using a factory anymore. More information about the instanciation listener is located in Wicket&#8217;s JavaDoc.</p>
+<p>The label in listing 16 is clearly encapsulated in a component without using a factory. Now you can easily create inline implementations and override <em>isVisible()</em> or other stuff. Naturally, you might claim
+[I need a factory to initialize some values in the component, e.g. a Spring service.] For this you can create a implementation of <em>IComponentInstantiationListener</em>. This listener gets called on the super-constructor of every component. The most popular implementation of this interface is the <em>SpringComponentInjector</em> which injects Spring beans in components when the fields are annotated with <em>\_SpringBean</em>. You can easliy write and add your own implementation of <em>IComponentInstantiationListener</em>. So there is no reason for using a factory anymore. More information about the instanciation listener is located in Wicket&#8217;s JavaDoc.</p>
 </div>
 </div>
 <div class="sect2">
@@ -13419,7 +13525,8 @@ When page class is provided <em>IPageSource</em> delegates page creation to inte
 <div class="paragraph">
 <p><em>org.apache.wicket.page.IPageManager</em>'s task is to manage which pages have been used in a request and store their last state in the backing stores, namely <em>IPageStore</em>.
 The default implementation <em>org.apache.wicket.page.PageStoreManager</em> collects all stateful pages which have been used in the request cycle (more than one page can be used in a single request if for example <em>setResponsePage()</em> or <em>RestartResponseException</em> is used).
-At the end of the request all collected page instances are being stored in the first level cache - http session. They are stored in http session attribute named _ [wicket:persistentPageManagerData-APPLICATION_NAME] and passed to the underlying <em>IPageStore</em>.
+At the end of the request all collected page instances are being stored in the first level cache - http session. They are stored in http session attribute named _
+[wicket:persistentPageManagerData-APPLICATION_NAME] and passed to the underlying <em>IPageStore</em>.
 When the next http request comes <em>IPageProvider</em> will ask for page with specific id and <em>PageStoreManager</em> will look first in the http session and if no match is found then it will delegate to the IPageStore. At the end of the second request the http session based cache is being overwritten completely with the newly used page instances.</p>
 </div>
 <div class="paragraph">
@@ -13628,7 +13735,8 @@ Another requirement is a good Internet connection (a flat ADSL is enough) becaus
 <h4 id="from-maven-to-our-ide"><a class="anchor" href="#from-maven-to-our-ide"></a>26.2.1. From Maven to our IDE</h4>
 <div class="paragraph">
 <p>Wicket project and its dependencies are managed using Maven. This tool is very useful also when we want to create a new project based on Wicket from scratch. With a couple of shell commands we can generate a new project properly configured and ready to be imported into our favourite IDE.
-The main step to create such a project is to run the command which generates project&#8217;s structure and its artifacts. If we are not familiar with Maven or we simply don&#8217;t want to type this command by hand, we can use the utility form on Wicket site at  <a href="http://wicket.apache.org/start/quickstart.html">http://wicket.apache.org/start/quickstart.html</a> :</p>
+The main step to create such a project is to run the command which generates project&#8217;s structure and its artifacts. If we are not familiar with Maven or we simply don&#8217;t want to type this command by hand, we can use the utility form on Wicket site at
+<a href="http://wicket.apache.org/start/quickstart.html">http://wicket.apache.org/start/quickstart.html</a> :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -13752,7 +13860,8 @@ If our IDE is Eclipse the import procedure is a little more complex. Before open
 </div>
 </div>
 <div class="paragraph">
-<p>Once the project has been imported into Eclipse, we are free to use our favourite plug-ins to run it or debug it (like for example  [run-jetty-run] <a href="http://code.google.com/p/run-jetty-run/" class="bare">http://code.google.com/p/run-jetty-run/</a> ).</p>
+<p>Once the project has been imported into Eclipse, we are free to use our favourite plug-ins to run it or debug it (like for example
+[run-jetty-run] <a href="http://code.google.com/p/run-jetty-run/" class="bare">http://code.google.com/p/run-jetty-run/</a> ).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -13786,16 +13895,20 @@ If we modify the pom.xml file (for example adding further dependencies) we must 
 </div>
 <div class="paragraph">
 <p><strong>NetBeans</strong>
-NetBeans offers Wicket support through 'NetBeans Plugin for Wicket' hosted at  <a href="http://plugins.netbeans.org/plugin/3586/wicket-1-4-support">http://plugins.netbeans.org/plugin/3586/wicket-1-4-support</a> . This plugin is released under CDDL-1.0 license.
-You can  find a nice introduction guide to this plugin at  <a href="http://netbeans.org/kb/docs/web/quickstart-webapps-wicket.html">http://netbeans.org/kb/docs/web/quickstart-webapps-wicket.html</a> .</p>
+NetBeans offers Wicket support through 'NetBeans Plugin for Wicket' hosted at
+<a href="http://plugins.netbeans.org/plugin/3586/wicket-1-4-support">http://plugins.netbeans.org/plugin/3586/wicket-1-4-support</a> . This plugin is released under CDDL-1.0 license.
+You can  find a nice introduction guide to this plugin at
+<a href="http://netbeans.org/kb/docs/web/quickstart-webapps-wicket.html">http://netbeans.org/kb/docs/web/quickstart-webapps-wicket.html</a> .</p>
 </div>
 <div class="paragraph">
 <p><strong>Intellj IDEA</strong>
-For JetBrain IDEA we can use WicketForge plugin, hosted at Google Code  <a href="http://code.google.com/p/wicketforge/">http://code.google.com/p/wicketforge/</a> . The plugin is released under ASF 2.0 license.</p>
+For JetBrain IDEA we can use WicketForge plugin, hosted at Google Code
+<a href="http://code.google.com/p/wicketforge/">http://code.google.com/p/wicketforge/</a> . The plugin is released under ASF 2.0 license.</p>
 </div>
 <div class="paragraph">
 <p><strong>Eclipse</strong>
-With Eclipse we can install one of the plugins that supports Wicket. As of the writing of this document, the most popular is probably Qwickie, available in the Eclipse Marketplace and hosted on Google Code at  <a href="http://code.google.com/p/qwickie/">http://code.google.com/p/qwickie/</a> .
+With Eclipse we can install one of the plugins that supports Wicket. As of the writing of this document, the most popular is probably Qwickie, available in the Eclipse Marketplace and hosted on Google Code at
+<a href="http://code.google.com/p/qwickie/">http://code.google.com/p/qwickie/</a> .
 QWickie is released under ASF 2.0 license.</p>
 </div>
 </div>
@@ -13808,7 +13921,8 @@ QWickie is released under ASF 2.0 license.</p>
 <div class="sect2">
 <h3 id="what-is-project-wicketstuff"><a class="anchor" href="#what-is-project-wicketstuff"></a>27.1. What is project WicketStuff</h3>
 <div class="paragraph">
-<p>WicketStuff is an umbrella project that gathers different Wicket-related projects developed and maintained by the community. The project is hosted on GitHub at  <a href="https://github.com/wicketstuff/core">https://github.com/wicketstuff/core</a> .
+<p>WicketStuff is an umbrella project that gathers different Wicket-related projects developed and maintained by the community. The project is hosted on GitHub at
+<a href="https://github.com/wicketstuff/core">https://github.com/wicketstuff/core</a> .
 Every module is structured as a parent Maven project containing the actual project that implements the new functionality and an example project that illustrates how to use it in our code. The resulting directory structure of each module is the following:</p>
 </div>
 <div class="listingblock">
@@ -13820,7 +13934,9 @@ Every module is structured as a parent Maven project containing the actual proje
 </div>
 </div>
 <div class="paragraph">
-<p>So far we have introduced only modules Kryo Serializer and JavaEE Inject, but WicketStuff comes with many other modules that can be used in our applications. Some of them come in handy to improve the user experience of our pages with complex components or integrating some popular web services (like  <a href="http://maps.google.com/">Google Maps</a> ) and JavaScript libraries (like  <a href="http://www.tinymce.com/">TinyMCE</a> ).</p>
+<p>So far we have introduced only modules Kryo Serializer and JavaEE Inject, but WicketStuff comes with many other modules that can be used in our applications. Some of them come in handy to improve the user experience of our pages with complex components or integrating some popular web services (like
+<a href="http://maps.google.com/">Google Maps</a> ) and JavaScript libraries (like
+<a href="http://www.tinymce.com/">TinyMCE</a> ).</p>
 </div>
 <div class="paragraph">
 <p>This appendix provides a quick overview of what WicketStuff offers to enhance the usability and the visually-appealing of our pages.</p>
@@ -13832,7 +13948,8 @@ Every module is structured as a parent Maven project containing the actual proje
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Every WicketStuff module can be downloaded as JAR archive at  <a href="http://mvnrepository.com">http://mvnrepository.com</a> . This site provides also the XML fragment needed to include it as a dependency into our pom.xml file.
+Every WicketStuff module can be downloaded as JAR archive at
+<a href="http://mvnrepository.com">http://mvnrepository.com</a> . This site provides also the XML fragment needed to include it as a dependency into our pom.xml file.
 </td>
 </tr>
 </table>
@@ -13902,7 +14019,8 @@ textArea.add(<span class="keyword">new</span> TinyMceBehavior(settings));</code>
 <div class="sect2">
 <h3 id="module-wicketstuff-gmap3"><a class="anchor" href="#module-wicketstuff-gmap3"></a>27.3. Module wicketstuff-gmap3</h3>
 <div class="paragraph">
-<p>Module wicketstuff-gmap3 integrates  <a href="http://maps.google.com">Google Maps</a> service with Wicket providing component org.wicketstuff.gmap.GMap. If we want to embed Google Maps into one of our pages we just need to add component GMap inside the page. The following snippet is taken from example page SimplePage:</p>
+<p>Module wicketstuff-gmap3 integrates
+<a href="http://maps.google.com">Google Maps</a> service with Wicket providing component org.wicketstuff.gmap.GMap. If we want to embed Google Maps into one of our pages we just need to add component GMap inside the page. The following snippet is taken from example page SimplePage:</p>
 </div>
 <div class="paragraph">
 <p><strong>HTML:</strong></p>
@@ -13936,13 +14054,15 @@ textArea.add(<span class="keyword">new</span> TinyMceBehavior(settings));</code>
 </div>
 </div>
 <div class="paragraph">
-<p>The component defines a number of setters to customize its behavior and appearance. More info can be found on wiki page  <a href="https://github.com/wicketstuff/core/wiki/Gmap3">https://github.com/wicketstuff/core/wiki/Gmap3</a> .</p>
+<p>The component defines a number of setters to customize its behavior and appearance. More info can be found on wiki page
+<a href="https://github.com/wicketstuff/core/wiki/Gmap3">https://github.com/wicketstuff/core/wiki/Gmap3</a> .</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="module-wicketstuff-googlecharts"><a class="anchor" href="#module-wicketstuff-googlecharts"></a>27.4. Module wicketstuff-googlecharts</h3>
 <div class="paragraph">
-<p>To integrate the  <a href="https://developers.google.com/chart/">Google Chart</a> tool into our pages we can use module wicketstuff-googlecharts. To display a chart we must combine the following entities: component Chart, interface IChartData and class ChartProvider, all inside package org.wicketstuff.googlecharts. The following snippet is taken from example page Home:</p>
+<p>To integrate the
+<a href="https://developers.google.com/chart/">Google Chart</a> tool into our pages we can use module wicketstuff-googlecharts. To display a chart we must combine the following entities: component Chart, interface IChartData and class ChartProvider, all inside package org.wicketstuff.googlecharts. The following snippet is taken from example page Home:</p>
 </div>
 <div class="paragraph">
 <p><strong>HTML:</strong></p>
@@ -14005,7 +14125,8 @@ add(<span class="keyword">new</span> Chart(<span class="string"><span class="del
 </div>
 </div>
 <div class="paragraph">
-<p>The following snippet illustrate how to use DataGrid and is taken from wiki page  <a href="https://github.com/wicketstuff/core/wiki/InMethodGrid">https://github.com/wicketstuff/core/wiki/InMethodGrid</a> :</p>
+<p>The following snippet illustrate how to use DataGrid and is taken from wiki page
+<a href="https://github.com/wicketstuff/core/wiki/InMethodGrid">https://github.com/wicketstuff/core/wiki/InMethodGrid</a> :</p>
 </div>
 <div class="paragraph">
 <p><strong>HTML:</strong></p>
@@ -14037,7 +14158,8 @@ add(grid);</code></pre>
 <p>In the code above we have used convenience class DefaultDataGrid that is a subclass of DataGrid and it already comes with a navigation toolbar.</p>
 </div>
 <div class="paragraph">
-<p>The example pages are under package com.inmethod.grid.examples.pages in the example project which is hosted at  <a href="http://www.wicket-library.com/inmethod-grid/data-grid/simple">http://www.wicket-library.com/inmethod-grid/data-grid/simple</a> .</p>
+<p>The example pages are under package com.inmethod.grid.examples.pages in the example project which is hosted at
+<a href="http://www.wicket-library.com/inmethod-grid/data-grid/simple">http://www.wicket-library.com/inmethod-grid/data-grid/simple</a> .</p>
 </div>
 </div>
 <div class="sect2">
@@ -14130,7 +14252,8 @@ To write/read objects to response/from request, <em>AbstractRestResource</em> us
 <p>To use annotation <em>AuthorizeInvocation</em> we must specify in the resource construcor an instance of Wicket interface <em>IRoleCheckingStrategy</em>.</p>
 </div>
 <div class="paragraph">
-<p>To read the complete documentation of the module and to discover more advanced feature please refer to the  <a href="https://github.com/wicketstuff/core/blob/master/jdk-1.7-parent/wicketstuff-restannotations-parent">project homepage</a></p>
+<p>To read the complete documentation of the module and to discover more advanced feature please refer to the
+<a href="https://github.com/wicketstuff/core/blob/master/jdk-1.7-parent/wicketstuff-restannotations-parent">project homepage</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -14138,7 +14261,8 @@ To write/read objects to response/from request, <em>AbstractRestResource</em> us
 <div class="paragraph">
 <p>Wicket makes working with AJAX easy and pleasant with its component-oriented abstraction. However as side effect, AJAX components and behaviors make their hosting page stateful. This can be quite annoying if we are working on a page that must be stateless (for example a login page).
 In this case an obvious solution would be to roll out our own stateless components/behaviors, but Wicketstuff alredy offers such kind of artifacts with <em>stateless</em> module. Here you can find the stateless version of the basic AJAX componets and behaviors shiped with Wicket, like <em>StatelessAjaxSubmitLink</em>, <em>StatelessAjaxFallbackLink</em>, <em>StatelessAjaxEventBehavior</em>, <em>StatelessAjaxFormSubmitBehavior</em> etc&#8230;&#8203;
-A short introduction to this module can be found on its  <a href="https://github.com/wicketstuff/core/tree/master/jdk-1.7-parent/stateless-parent">home page</a> .</p>
+A short introduction to this module can be found on its
+<a href="https://github.com/wicketstuff/core/tree/master/jdk-1.7-parent/stateless-parent">home page</a> .</p>
 </div>
 </div>
 </div>
@@ -14258,10 +14382,12 @@ A short introduction to this module can be found on its  <a href="https://github
 <div class="ulist">
 <ul>
 <li>
-<p>The guide uses Grails GDoc to generate the final HTML/PDF so you should consult with its <a href="http://grails.org/WikiSyntax">syntax</a></p>
+<p>The guide uses Grails GDoc to generate the final HTML/PDF so you should consult with its
+<a href="http://grails.org/WikiSyntax">syntax</a></p>
 </li>
 <li>
-<p>Clone Apache Wicket&#8217;s GIT repository <a href="https://github.com/apache/wicket.git">site</a></p>
+<p>Clone Apache Wicket&#8217;s GIT repository
+<a href="https://github.com/apache/wicket.git">site</a></p>
 </li>
 </ul>
 </div>
@@ -14276,7 +14402,8 @@ A short introduction to this module can be found on its  <a href="https://github
 <p>Edit the <em>.gdoc</em> files in <em>wicket/wicket-user-guide/src/docs/guide</em> folder</p>
 </li>
 <li>
-<p>To preview your changes run  [mvn clean package -P guide] in the <em>wicket/wicket-user-guide</em> folder (in eclipse use a run configuration)</p>
+<p>To preview your changes run
+[mvn clean package -P guide] in the <em>wicket/wicket-user-guide</em> folder (in eclipse use a run configuration)</p>
 </li>
 <li>
 <p>Navigate to <em>wicket/wicket-user-guide/target/guide/6.x</em> and open one of the following files a browser / pdf viewer:</p>
@@ -14295,7 +14422,8 @@ A short introduction to this module can be found on its  <a href="https://github
 </div>
 </li>
 <li>
-<p>Create a ticket in Apache Wicket&#8217;s <a href="https://issues.apache.org/jira/browse/WICKET">JIRA</a></p>
+<p>Create a ticket in Apache Wicket&#8217;s
+<a href="https://issues.apache.org/jira/browse/WICKET">JIRA</a></p>
 </li>
 <li>
 <p><strong>Commit and push the changes</strong> to your forked Apacke Wicket&#8217;s GIT repository and <strong>create a pull request</strong> on github</p>

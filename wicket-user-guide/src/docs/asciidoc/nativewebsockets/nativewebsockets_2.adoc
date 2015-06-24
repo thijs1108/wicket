@@ -46,7 +46,8 @@ Depending on the web container that is used the application has to add a depende
 NOTE: All web containers providing JSR356 implementation are built with Java 7. This is the reason why _wicket-native-websocket-javax_ module is available only with Wicket 7.x. If your application runs with JRE 7.x then you can
 use _wicket-native-websocket-javax_ together with the latest version of Wicket 6.x. Beware that the API/implementation of _wicket-native-websocket-javax_ may change before Wicket 7.0.0 is released!
 
-NOTE: The examples above show snippets for Maven's pom.xml but the application can use any other dependency management tool like http://www.gradle.org/[Gradle]
+NOTE: The examples above show snippets for Maven's pom.xml but the application can use any other dependency management tool like 
+http://www.gradle.org/[Gradle]
 
 * *web.xml*
 

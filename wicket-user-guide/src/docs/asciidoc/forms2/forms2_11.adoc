@@ -5,7 +5,8 @@ In this paragraph we will see which components can be used to handle HTML radio 
 
 image::../img/choice-form-screenshot.png[]
 
-A check box can be used as single component to set a boolean property. For this purpose Wicket provides the _org.apache.wicket.markup.html.form.CheckBox_ component which must be attached to <input type= ../>[checkbox] tag. In the next example (project SingleCheckBox) we will consider a form similar to the one used in <<modelsforms.adoc#model-chaining,paragraph 11.5>> to edit a Person object, but with an additional checkbox to let the user decide if she wants to subscribe to our mailing list or not. The form uses the following bean as backing object:
+A check box can be used as single component to set a boolean property. For this purpose Wicket provides the _org.apache.wicket.markup.html.form.CheckBox_ component which must be attached to <input type=
+../>[checkbox] tag. In the next example (project SingleCheckBox) we will consider a form similar to the one used in <<modelsforms.adoc#model-chaining,paragraph 11.5>> to edit a Person object, but with an additional checkbox to let the user decide if she wants to subscribe to our mailing list or not. The form uses the following bean as backing object:
 
 [source,java]
 ----
@@ -147,7 +148,8 @@ ChoiceRenderer render = new ChoiceRenderer("name");
 
 image::../img/grouped-checkbox2.png[]
 
-=== How to implement a  [Select all] checkbox
+=== How to implement a 
+[Select all] checkbox
 
 A nice feature we can offer to users when we have a group of checkboxes is a “special” checkbox which selects/unselects all the other options of the group:
 

@@ -163,7 +163,7 @@
 						$linknamevalidated = filter_var($linkname, FILTER_SANITIZE_URL);
 						if (!filter_var($linknamevalidated, FILTER_VALIDATE_URL) === false) {
 							$linklength = strlen($link) + strlen($linkname) + 2;
-							echo "$linkname" . "[" . $link. "]\n";
+							echo "\n$linkname" . "[" . $link. "]\n";
 							$echo=1;
 							$i=$i+$linklength;
 							$linkplaced=1;
@@ -325,7 +325,7 @@
 					else{
 						$linkadresslength=strlen($linkadress);
 						$linknamelength=strlen($linkname);
-						echo " " . substr($linkadress, 2, $linkadresslength-2) . "[" . $linkname . "] ";
+						echo "\n" . substr($linkadress, 2, $linkadresslength-2) . "[" . $linkname . "] ";
 						$i = $i + $linkadresslength + $linknamelength + 2;
 					}
 				}

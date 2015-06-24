@@ -36,7 +36,8 @@ Base component AjaxEditableLabel exposes the following set of AJAX-aware methods
 * *onError(AjaxRequestTarget target)*: called when the new inserted input has failed validation.
 * *onCancel(AjaxRequestTarget target)*: called when user has exited from editing mode pressing escape key. The default implementation brings back the label to its initial state hiding the editor component.  
 
-Wicket module wicket-examples contains page class _EditableLabelPage.java_ which shows all these three components together. You can see this page in action at  http://www.wicket-library.com/wicket-examples-6.0.x/ajax/editable-label[http://www.wicket-library.com/wicket-examples-6.0.x/ajax/editable-label] :
+Wicket module wicket-examples contains page class _EditableLabelPage.java_ which shows all these three components together. You can see this page in action at 
+http://www.wicket-library.com/wicket-examples-6.0.x/ajax/editable-label[http://www.wicket-library.com/wicket-examples-6.0.x/ajax/editable-label] :
 
 image::../img/edit-label-example-screenshot.png[]
 
@@ -71,11 +72,13 @@ AutoCompleteTextField field = new AutoCompleteTextField<T>("field", model) {
 };
 ----
 
-Wicket module wicket-examples contains page class _AutoCompletePagePage.java_ which shows an example of autocomplete text field. The running example is available at  http://www.wicket-library.com/wicket-examples-6.0.x/ajax/autocomplete[http://www.wicket-library.com/wicket-examples-6.0.x/ajax/autocomplete] .
+Wicket module wicket-examples contains page class _AutoCompletePagePage.java_ which shows an example of autocomplete text field. The running example is available at 
+http://www.wicket-library.com/wicket-examples-6.0.x/ajax/autocomplete[http://www.wicket-library.com/wicket-examples-6.0.x/ajax/autocomplete] .
 
 === Modal window
 
-Class _org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow_ is an implementation of a  http://en.wikipedia.org/wiki/Modal_window[modal window] based on AJAX:
+Class _org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow_ is an implementation of a 
+http://en.wikipedia.org/wiki/Modal_window[modal window] based on AJAX:
 
 image::../img/modal-window-example-screenshot.png[]
 

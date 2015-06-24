@@ -1,3 +1,4 @@
 
-Wicket-Atmosphere experimental module provides integration with https://github.com/Atmosphere/atmosphere[Atmosphere]
+Wicket-Atmosphere experimental module provides integration with 
+https://github.com/Atmosphere/atmosphere[Atmosphere]
 
